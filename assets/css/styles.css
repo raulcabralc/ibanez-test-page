@@ -204,7 +204,7 @@ tfoot, table th {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    min-height: 130vh;
+    min-height: 100vh;
     text-align: center;
 }
 
@@ -317,7 +317,7 @@ tfoot, table th {
 
 .pricing-content {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     max-width: 80rem;
     min-height: 100vh;
     justify-content: center;
@@ -337,9 +337,14 @@ tfoot, table th {
     margin-bottom: 10rem
 }
 
+.responsive-table {
+    overflow-x: auto;
+}
+
 .contact-content {
     position: relative;
     display: grid;
+    flex-flow: column nowrap;
     grid-template-columns: 1fr 1.5fr;
     gap: var(--gap);
     min-height: 100vh;
@@ -492,12 +497,16 @@ tfoot, table th {
 
     .menu-content ul,
     .menu-content {
-        flex-direction: column;
+        flex-flow: column wrap;
         justify-content: center;
     }
 
     .menu {
         display: none;
+    }
+
+    .close-menu-label {
+        flex-flow: column nowrap;
     }
 
     .close-menu-label::after {
